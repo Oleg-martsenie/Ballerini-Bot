@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+    border: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(
+        68.15deg, 
+        #2F2325 16.62%, #8E5D52 
+        85.61%
+        );
+}
+
+header,
+section,
+footer {
+    padding: 3rem 9%;
+}
+
+#menu-mobile span {
+    font-size: 5rem;
+    display: none;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.header .logo {
+    width: 50px; height: 50px;
+}
+
+.header .logo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.header .navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.header .navbar a {
+    padding: .8rem 1rem;
+    font-size: 1.7rem;
+    color: #FFF2E7;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+
+main {
+    border-top: 0.4px solid #f5f5f5;
+    margin-bottom: 2rem;
+}
+
+.area-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.area-top .info-area {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.area-top .info-area h1 {
+    font-family: 'Righteous', sans-serif;
+    font-weight: 400;
+    color: #FFF2E7;
+    font-size: 3rem;
+    letter-spacing: .3rem;
+}
+
+.area-top .info-area h2 {
+    color: #ECD6C4;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.7rem;
+}
+
+.area-top .info-area a {
+    background-color: #FFFFFF10;
+    backdrop-filter: blur(12px);
+    -wekit-backdrop-filter: blur(12px);
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    color: #f5f5f5;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    border-radius: .5rem;
+    box-shadow: .1rem 0 .5rem rgba(0,0,0.7);
+}
+
+.area-top .img-area{
+    width: 400px; height: 400px;
+}
+
+.area-top .img-area img {
+    height: 100%; width: 100%;
+    object-fit: cover;
+}
+
+.atividade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    color: #ECD6C4;
+    font-family: 'Nunito', sans-serif;
+}
+
+.atividade h3 {
+    border-top: .1rem solid #ECD6C4;
+    padding-top: 3rem;
+    font-size: 2.4rem;
+    margin: 1rem 0;
+}
+
+.atividade p {
+    font-size: 1.5rem;
+}
+
+.footer {
+    border-top: .1rem solid #ECD6C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img {
+    height: 8vh;
+}
+
+@media screen and (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    header,
+    section,
+    footer {
+        padding: 2rem 5%;
+    }
+    #menu-mobile span {
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        display: block;
+        border-top: .2rem solid #f5f5f5;
+        background-color: #FFFFFF10;
+        backdrop-filter: blur(12px);
+        -wekit-backdrop-filter: blur(12px);
+        width: 100vw;
+        height: 90vh;
+        z-index: 1000;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar a  {
+        display: block;
+        padding: 3rem 4%;
+    }
+
+    .area-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .area-top .img-area{
+        width: 350px; height: 350px;
+    }
+    .area-top .img-area img {
+        height: 100%; width: 100%;
+    }
+}
+
+
+@media screen and (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+    section {
+        padding: 2rem 3%;
+    }
+    .area-top .img-area{
+        width: 300px; height: 300px;
+    }
+    .area-top .img-area img {
+        height: 100%; width: 100%;
+    }
+}
